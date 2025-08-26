@@ -127,6 +127,15 @@
             color: var(--primary);
         }
         
+        /* Fix for dark mode navigation visibility */
+        [data-theme="dark"] .nav-links a {
+            color: var(--text-dark);
+        }
+        
+        [data-theme="dark"] .nav-links a:hover {
+            color: var(--primary);
+        }
+        
         /* Hero Section */
         .hero {
             padding: 120px 2rem 80px;
@@ -510,7 +519,7 @@
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
-        <h1 class="hero-title">Desenvolvedor em Formação</h1>
+        <h1 class="hero-title">Desenvolvedor FullStack</h1>
         <p class="hero-subtitle">
             Apaixonado por transformar ideias em código. Criando interfaces simples, funcionais e com personalidade.
         </p>
