@@ -1,4 +1,5 @@
 💻 Marcelo Torres - Portfólio Pessoal
+
 Bem-vindo ao meu portfólio! Este é um site responsivo que apresenta minha jornada como desenvolvedor em formação, destacando minhas habilidades, projetos e experiências.
 🌐 Acesse o Site
 🔗 marcelotorres1982.github.io
@@ -138,8 +139,8 @@ Tipografia escalável
 📧 Contato
 
 Email: marcelotorres1982@gmail.com
-LinkedIn: Marcelo Torres
-GitHub: marcelotorres1982
+LinkedIn: https://www.linkedin.com/in/marcelo-t-554b8045
+GitHub: https://github.com/marcelotorres1982
 
 📄 Licença
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
