@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Marcelo Torres</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Currículo completo de Marcelo Torres - Desenvolvedor Front-end">
+    <meta name="keywords" content="currículo, desenvolvedor, frontend, javascript, react, css, html">
+    <meta name="author" content="Marcelo Torres">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+            --border: #e5e7eb;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        
+        [data-theme="dark"] {
+            --text-dark: #f9fafb;
+            --text-light: #d1d5db;
+            --bg-light: #111827;
+            --white: #1f2937;
+            --border: #374151;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            z-index: 1001;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+        
+        .theme-toggle:hover {
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 20px var(--shadow);
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        [data-theme="dark"] header {
+            background: rgba(31, 41, 55, 0.95);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        [data-theme="dark"] .nav-links a {
+            color: var(--text-dark);
+        }
+        
+        [data-theme="dark"] .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .page-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--text-dark), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Download Button */
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary);
+            color: var(--white);
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.25);
+            margin: 2rem auto;
+        }
+        
+        .download-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px 0 rgba(37, 99, 235, 0.35);
+        }
+        
+        /* Resume Content */
+        .resume-content {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 10px 25px -5px var(--shadow);
+            border: 1px solid var(--border);
+            margin-bottom: 2rem;
+        }
+        
+        .resume-section {
+            margin-bottom: 3rem;
+        }
+        
+        .resume-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Personal Info */
+        .personal-info {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 2rem;
+            align-items: start;
+            margin-bottom: 2rem;
+        }
+        
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--primary), #3b82f6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            box-shadow: 0 8px 20px var(--shadow);
+        }
+        
+        .contact-info h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-info p {
+            color: var(--text-light);
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            color: var(--primary-dark);
+        }
+        
+        /* Experience and Education Items */
+        .experience-item, .education-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .experience-item:hover, .education-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .item-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .item-period {
+            background: var(--primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .item-company {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .item-description {
+            color: var(--text-light);
+        }
+        
+        .item-description ul {
+            margin: 0.5rem 0 0 1rem;
+        }
+        
+        .item-description li {
+            margin-bottom: 0.3rem;
+        }
+        
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .skill-item {
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--shadow);
+            border-color: var(--primary);
+        }
+        
+        .skill-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .skill-name {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        /* Languages */
+        .languages-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+        
+        .language-name {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .language-level {
+            background: var(--primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+        }
+        
+        /* Back Button */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            border: 2px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        [data-theme="dark"] footer {
+            background: var(--bg-light);
+            color: var(--text-light);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .page-title {
+                font-size: 2.5rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .resume-content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .personal-info {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .profile-photo {
+                margin: 0 auto;
+            }
+            
+            .item-header {
+                flex-direction: column;
+                align-items: start;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            .theme-toggle {
+                right: 10px;
+                width: 45px;
+                height: 45px;
+                font-size: 1rem;
+            }
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Theme transition for all elements */
+        * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        /* Print Styles */
+        @media print {
+            .theme-toggle,
+            header,
+            .back-btn,
+            .download-btn,
+            footer {
+                display: none !important;
+            }
+            
+            .main-content {
+                padding-top: 0;
+            }
+            
+            .resume-content {
+                box-shadow: none;
+                border: none;
+            }
+            
+            body {
+                color: #000;
+                background: #fff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" title="Alternar tema">
+        🌙
+    </button>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Marcelo Torres</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#habilidades">Habilidades</a></li>
+                <li><a href="index.html#projetos">Projetos</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+                <li><a href="curriculo.html" class="active">Currículo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <a href="index.html" class="back-btn">
+                    ← Voltar ao Portfólio
+                </a>
+                <h1 class="page-title">Currículo</h1>
+                <p class="page-subtitle">
+                    Minha trajetória profissional e acadêmica completa
+                </p>
+                <a href="#" class="download-btn" onclick="window.print()">
+                    📄 Baixar PDF
+                </a>
+            </div>
+
+            <!-- Resume Content -->
+            <div class="resume-content">
+                <!-- Personal Information -->
+                <section class="resume-section">
+                    <div class="personal-info">
+                        <div class="profile-photo">
+                            <img src="./foto.jpeg" alt="Marcelo Torres" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
+                        </div>
+                        <div class="contact-info">
+                            <h3>Marcelo Torres</h3>
+                            <p><strong>Desenvolvedor Full Stack</strong></p>
+                            <p>📧 <a href="mailto:marcelotorres1982@gmail.com">marcelotorres1982@gmail.com</a></p>
+                            <p>📱 <a href="tel:+5551992733897">(51) 99273-3897</a></p>
+                            <p>🌐 <a href="https://github.com/marcelotorres1982" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/marcelo-t-554b8045/" target="_blank">LinkedIn</a></p>
+                            <p>📍 Porto Alegre, RS - Brasil</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Professional Summary -->
+                <section class="resume-section">
+                    <h2 class="section-title">Resumo Profissional</h2>
+                    <p>
+                        <div><span class="highlight">Desenvolvedor Full-Stack</span> em transição de carreira com <span class="highlight">perfil único no mercado</span>: combino sólida experiência comercial (3+ anos na Dell Technologies) com formação recente em Análise e Desenvolvimento de Sistemas e projetos práticos em Python, IA e automação.
+                        <br><br>
+                        Meu diferencial competitivo está na capacidade de <span class="highlight">traduzir necessidades de negócio em soluções tecnológicas eficazes</span>, entendendo profundamente tanto o lado técnico quanto as demandas corporativas. Experiência comprovada em vendas consultivas B2B, gestão de contas e desenvolvimento de relacionamentos estratégicos, agora aplicada ao desenvolvimento de software.
+                        <br><br>
+                        <strong>Especialidades:</strong> Python & IA, Vendas Técnicas, Automação de Processos, Análise de Dados, Gestão de Projetos.
+                        </div>
+                    </p>
+                </section>
+
+                <!-- Experience -->
+                <section class="resume-section">
+                    <h2 class="section-title">Experiência Profissional</h2>
+                    
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">Desenvolvedor Full Stack (Projetos Pessoais)</div>
+                                <div class="item-company">Freelancer</div>
+                            </div>
+                            <div class="item-period">2023 - Atual</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Desenvolvimento de aplicações web completas usando Python, Streamlit e APIs</li>
+                                <li>Criação do BarberVibe - Sistema de agendamentos para barbearias</li>
+                                <li>Desenvolvimento de aplicação de consulta CNPJ integrada com APIs brasileiras</li>
+                                <li>Implementação de interfaces responsivas e user-friendly</li>
+                                <li>Gerenciamento de projetos no GitHub com controle de versão</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">Executivo de Contas</div>
+                                <div class="item-company">Dell Computadores do Brasil Ltda</div>
+                            </div>
+                            <div class="item-period">2022 - 2025</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                        <li><strong>Gestão estratégica de carteira premium</strong> com 800+ clientes empresariais ativos</li>
+                        <li><strong>Participante do Dell NextGen Program</strong> - programa global exclusivo para talentos de alto potencial</li>
+                        <li><strong>Especialista em vendas consultivas</strong> de toda linha Dell: computadores, servidores, storages e soluções integradas</li>
+                        <li><strong>Domínio completo das ferramentas Dell:</strong> SalesForce, SalesWorks, USP, DOMS</li>
+                        <li><strong>Pioneer na implementação da IA Dell Sales Chat,</strong> contribuindo para automação comercial inovadora</li>
+                        <li><strong>Certificações técnicas</strong> com parceiros: Microsoft, Intel, McAfee, Foxit</li>
+                        <li><strong>Metodologias avançadas:</strong> BANT, MEDDIC, SPIN Selling para qualificação e conversão</li>
+                            </ul>
+                        </div>
+ 
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">Inside Sales</div>
+                                <div class="item-company">Qualicorp S.A</div>
+                            </div>
+                            <div class="item-period">2021 - 2021</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                            <li>Prospecção ativa e vendas consultivas de planos de saúde empresariais</li>
+                            <li>Elaboração de relatórios gerenciais e análise de conversão</li>
+                            <li>Implementação de estratégias para otimização de resultados</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">Experiências Complementares</div>
+                                <div class="item-company">Diversos Setores</div>
+                            </div>
+                            <div class="item-period">2015 - 2020</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li><strong>Volpato Segurança:</strong> Vendas consultivas de soluções de segurança eletrônica</li>
+                                <li><strong>Sulvale Corretora:</strong> Gestão administrativa e CRM</li>
+                                <li><strong>Vivo S.A:</strong> Vendas corporativas em telecomunicações</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+                </section>
+
+                <!-- Education -->
+                <section class="resume-section">
+                    <h2 class="section-title">Formação Acadêmica</h2>
+                    
+                    <div class="education-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">Análise e Desenvolvimento de Sistemas</div>
+                                <div class="item-company">Centro Universitário Leonardo da Vinci - UNIASSELVI</div>
+                            </div>
+                            <div class="item-period">2021 - 2024</div>
+                        </div>
+                        <div class="item-description">
+                            <p>Formação voltada para desenvolvimento de software, análise de sistemas, programação orientada a objetos, banco de dados, engenharia de software e gestão de projetos.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills -->
+                <section class="resume-section">
+                    <h2 class="section-title">Habilidades Técnicas</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <span class="skill-icon">🐍</span>
+                            <div class="skill-name">Python</div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">🌐</span>
+                            <div class="skill-name">HTML5/CSS3</div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">⚡</span>
+                            <div class="skill-name">JavaScript</div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">⚛️</span>
+                            <div class="skill-name">React</div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">🔧</span>
+                            <div class="skill-name">Streamlit</div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">🗃️</span>
+                            <div class="skill-name">Git/GitHub</div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">🗄️</span>
+                            <div class="skill-name">MySQL</div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">🤖</span>
+                            <div class="skill-name">Machine Learning</div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">📱</span>
+                            <div class="skill-name">Design Responsivo</div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">🔌</span>
+                            <div class="skill-name">APIs REST</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projects -->
+                <section class="resume-section">
+                    <h2 class="section-title">Projetos em Destaque</h2>
+                    
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title"><a href="https://barbervibe-gx9zz9o4zf73dwycappcvcz.streamlit.app/">BarberVibe - Sistema de Agendamentos</a></div>
+                                <div class="item-company">Projeto Pessoal</div>
+                            </div>
+                            <div class="item-period">2025</div>
+                        </div>
+                        <div class="item-description">
+                            <p>Sistema completo para gestão de barbearias com funcionalidades de agendamento, cadastro de clientes e controle de horários. Desenvolvido com Python e Streamlit.</p>
+                            <p><strong>Tecnologias:</strong> Python, Streamlit, APIs</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title"><a href="https://consultacnpj-cdavsorkdb85j6tvyaxmdz.streamlit.app/">Consulta CNPJ</a></div>
+                                <div class="item-company">Projeto Pessoal</div>
+                            </div>
+                            <div class="item-period">2024</div>
+                        </div>
+                        <div class="item-description">
+                            <p>Aplicação web para consulta completa de informações empresariais através do CNPJ, utilizando múltiplas APIs oficiais brasileiras.</p>
+                            <p><strong>Tecnologias:</strong> Python, Streamlit, Requests, APIs</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Languages -->
+                <section class="resume-section">
+                    <h2 class="section-title">Idiomas</h2>
+                    <div class="languages-list">
+                        <div class="language-item">
+                            <span class="language-name">Português</span>
+                            <span class="language-level">Nativo</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="language-name">Inglês</span>
+                            <span class="language-level">Intermediário</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Additional Information -->
+                <section class="resume-section">
+                    <h2 class="section-title">Informações Complementares</h2>
+                    <ul>
+                        <li>Interesse em aprendizado contínuo e novas tecnologias</li>
+                        <li>Experiência com metodologias ágeis</li>
+                        <li>Habilidades em resolução de problemas e pensamento analítico</li>
+                        <li>Trabalho em equipe e comunicação efetiva</li>
+                        <li>Disponibilidade para home office ou presencial</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Marcelo Torres. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Theme Management
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        // Check for saved theme preference or default to 'light' mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        body.setAttribute('data-theme', currentTheme);
+        
+        // Update toggle button icon based on current theme
+        function updateToggleIcon(theme) {
+            themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+        
+        updateToggleIcon(currentTheme);
+        
+        // Toggle theme function
+        function toggleTheme() {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateToggleIcon(newTheme);
+        }
+        
+        themeToggle.addEventListener('click', toggleTheme);
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            const currentTheme = body.getAttribute('data-theme');
+            
+            if (window.scrollY > 50) {
+                if (currentTheme === 'dark') {
+                    header.style.background = 'rgba(31, 41, 55, 0.98)';
+                } else {
+                    header.style.background = 'rgba(255, 255, 255, 0.98)';
+                }
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                if (currentTheme === 'dark') {
+                    header.style.background = 'rgba(31, 41, 55, 0.95)';
+                } else {
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                }
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
