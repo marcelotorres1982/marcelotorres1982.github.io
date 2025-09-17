@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcelo Torres - Desenvolvedor Front-end</title>
+    <title>Marcelo Torres - Front-end Developer</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Portfólio de desenvolvedor front-end especializado em HTML, CSS, JavaScript, Python e React">
-    <meta name="keywords" content="desenvolvedor, frontend, javascript, react, css, html, portfólio">
-    <meta name="author" content="Seu Nome">
+    <meta name="description" content="Front-end developer portfolio specialized in HTML, CSS, JavaScript, Python and React">
+    <meta name="keywords" content="developer, frontend, javascript, react, css, html, portfolio">
+    <meta name="author" content="Marcelo Torres">
     
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
@@ -56,7 +56,7 @@
         /* Theme Toggle Button */
         .theme-toggle {
             position: fixed;
-            top: 50%;
+            top: 40%;
             right: 20px;
             transform: translateY(-50%);
             z-index: 1001;
@@ -125,6 +125,19 @@
         
         .nav-links a:hover {
             color: var(--primary);
+        }
+        
+        .lang-link {
+            background: var(--primary) !important;
+            color: white !important;
+            padding: 0.5rem 1rem !important;
+            border-radius: 6px !important;
+            font-weight: 600 !important;
+        }
+        
+        .lang-link:hover {
+            background: var(--primary-dark) !important;
+            transform: translateY(-1px);
         }
         
         /* Fix for dark mode navigation visibility */
@@ -431,6 +444,33 @@
             color: var(--text-light);
         }
         
+        /* Language Toggle Button */
+        .language-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1001;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .language-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--shadow);
+            background: var(--primary-dark);
+        }
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
@@ -471,6 +511,14 @@
                 width: 45px;
                 height: 45px;
                 font-size: 1rem;
+                top: 35%;
+            }
+            
+            .language-toggle {
+                bottom: 10px;
+                right: 10px;
+                padding: 8px 12px;
+                font-size: 0.9rem;
             }
         }
         
@@ -495,183 +543,138 @@
         * {
             transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
-
-        /* Language Toggle Button */
-.language-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1001;
-    background: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px var(--shadow);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-}
-
-.language-toggle:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px var(--shadow);
-    background: var(--primary-dark);
-}
-
-/* Ajustar posição do theme toggle */
-.theme-toggle {
-    top: 40%;
-}
-
-@media (max-width: 768px) {
-    .language-toggle {
-        bottom: 10px;
-        right: 10px;
-        padding: 8px 12px;
-        font-size: 0.9rem;
-    }
-    
-    .theme-toggle {
-        top: 35%;
-    }
-}
     </style>
 </head>
 <body>
     <!-- Language Toggle Button -->
-<a href="index-en.html" class="language-toggle" title="Switch to English">
-    🇺🇸 EN
-</a>
+    <a href="index.html" class="language-toggle" title="Alternar para Português">
+        🇧🇷 PT
+    </a>
+    
     <!-- Theme Toggle Button -->
-    <button class="theme-toggle" id="themeToggle" title="Alternar tema">
+    <button class="theme-toggle" id="themeToggle" title="Toggle theme">
         🌙
     </button>
 
     <!-- Header -->
     <header>
         <nav>
-            <a href="#inicio" class="logo">Marcelo Torres</a>
+            <a href="#home" class="logo">Marcelo Torres</a>
             <ul class="nav-links">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="index.html#sobre">Sobre</a></li>
-                <li><a href="index.html#habilidades">Habilidades</a></li>
-                <li><a href="index.html#projetos">Projetos</a></li>
-                <li><a href="index.html#contato">Contato</a></li>
-                <li><a href="curriculo.html">Currículo</a></li>
-                <li><a href="index-en.html" class="lang-link">🇺🇸 EN</a></li>
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="index-en.html#about">About</a></li>
+                <li><a href="index-en.html#skills">Skills</a></li>
+                <li><a href="index-en.html#projects">Projects</a></li>
+                <li><a href="index-en.html#contact">Contact</a></li>
+                <li><a href="curriculo-en.html">Resume</a></li>
+                <li><a href="index.html" class="lang-link">🇧🇷 PT</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <h1 class="hero-title">Desenvolvedor FullStack</h1>
+    <section id="home" class="hero">
+        <h1 class="hero-title">FullStack Developer</h1>
         <p class="hero-subtitle">
-            Apaixonado por transformar ideias em código. Criando interfaces simples, funcionais e com personalidade.
+            Passionate about transforming ideas into code. Creating simple, functional interfaces with personality.
         </p>
-        <a href="#projetos" class="cta-button">Ver Projetos</a>
+        <a href="#projects" class="cta-button">View Projects</a>
     </section>
 
     <!-- About Section -->
-    <section id="sobre" class="about">
+    <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Sobre Mim</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="./foto.jpeg" alt="Minha Foto" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
+                    <img src="./foto.jpeg" alt="My Photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
                 </div>
                 <div class="about-text">
-                    <p>Olá! Meu nome é <span class="highlight">Marcelo Torres</span>, sou formado em Análise e Desenvolvimento de Sistemas e apaixonado por tecnologia e programação. Tenho me dedicado aos estudos e à prática, buscando evoluir constantemente como desenvolvedor.</p>
+                    <p>Hello! My name is <span class="highlight">Marcelo Torres</span>, I have a degree in Systems Analysis and Development and I'm passionate about technology and programming. I have been dedicating myself to studies and practice, constantly seeking to evolve as a developer.</p>
                     
-                    <p>Atualmente, estou focado no aprendizado de <span class="highlight">HTML, CSS e JavaScript, Python, Machine Learning e MySQL</span>, desenvolvendo projetos próprios para fortalecer minha base no front-end e no back-end. Em breve, pretendo me aprofundar em <span class="highlight">React, Node.js e TypeScript</span>.</p>
+                    <p>Currently, I'm focused on learning <span class="highlight">HTML, CSS and JavaScript, Python, Machine Learning and MySQL</span>, developing my own projects to strengthen my foundation in front-end and back-end development. Soon, I plan to dive deeper into <span class="highlight">React, Node.js and TypeScript</span>.</p>
                     
-                    <p>Gosto de aprender na prática, enfrentar desafios e buscar sempre evoluir. Neste portfólio, compartilho um pouco da minha trajetória e dos projetos que venho desenvolvendo ao longo do caminho.</p>
+                    <p>I enjoy hands-on learning, facing challenges and always seeking to evolve. In this portfolio, I share a bit of my journey and the projects I've been developing along the way.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="habilidades" class="skills">
+    <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Habilidades</h2>
+            <h2 class="section-title">Skills</h2>
             <div class="skills-grid">
                 <div class="skill-card fade-in">
                     <div class="skill-icon">🎨</div>
                     <h3>HTML & CSS</h3>
-                    <p>Criação de layouts responsivos e estilização moderna com Flexbox, Grid e animações.</p>
+                    <p>Creating responsive layouts and modern styling with Flexbox, Grid and animations.</p>
                 </div>
                 <div class="skill-card fade-in">
                     <div class="skill-icon">⚡</div>
                     <h3>JavaScript</h3>
-                    <p>Programação interativa e dinâmica, manipulação do DOM e integração com APIs.</p>
+                    <p>Interactive and dynamic programming, DOM manipulation and API integration.</p>
                 </div>
                 <div class="skill-card fade-in">
                     <div class="skill-icon">⚛️</div>
                     <h3>React</h3>
-                    <p>Desenvolvimento de interfaces modernas e componentes reutilizáveis.</p>
+                    <p>Development of modern interfaces and reusable components.</p>
                 </div>
                 <div class="skill-card fade-in">
                     <div class="skill-icon">🗃️</div>
                     <h3>Git & GitHub</h3>
-                    <p>Controle de versão e colaboração em projetos de desenvolvimento.</p>
+                    <p>Version control and collaboration in development projects.</p>
                 </div>
                 <div class="skill-card fade-in">
                     <div class="skill-icon">🐍</div>
                     <h3>Python</h3>
-                    <p>Desenvolvimento de soluções que se adaptam a diversos contextos e necessidades de deployment.</p>
+                    <p>Development of solutions that adapt to various contexts and deployment needs.</p>
                 </div>
                 <div class="skill-card fade-in">
                     <div class="skill-icon">💻</div>
                     <h3>VS Code</h3>
-                    <p>Ambiente de desenvolvimento integrado com extensões úteis para produtividade.</p>
+                    <p>Integrated development environment with useful extensions for productivity.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projetos" class="projects">
+    <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Projetos</h2>
+            <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card fade-in">
                     <div class="project-image">
-                        <img src="./projeto1.png" alt="Projeto 1" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="./projeto1.png" alt="Project 1" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">💈BarberVibe - Transformando a Gestão de Barbearias</h3>
+                        <h3 class="project-title">💈BarberVibe - Transforming Barbershop Management</h3>
                         <p class="project-description">
-                            Sistema completo de agendamentos que combina tecnologia moderna com design intuitivo - 
-                            demonstrando minhas habilidades em desenvolvimento full-stack e resolução de problemas reais.
-                            🎯 O Problema: Barbearias ainda usam cadernos de papel ou sistemas caros e complexos.
+                            Complete appointment system that combines modern technology with intuitive design - 
+                            demonstrating my full-stack development skills and real problem-solving abilities.
+                            🎯 The Problem: Barbershops still use paper notebooks or expensive and complex systems.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Streamlit</span>
-                            
                         </div>
                         <div class="project-links">
-                            <a href="https://barbervibe-gx9zz9o4zf73dwycappcvcz.streamlit.app/" class="project-link">Ver Demo</a>
-                            <a href="https://github.com/marcelotorres1982/barbervibe" class="project-link">Código</a>
+                            <a href="https://barbervibe-gx9zz9o4zf73dwycappcvcz.streamlit.app/" class="project-link">View Demo</a>
+                            <a href="https://github.com/marcelotorres1982/barbervibe" class="project-link">Code</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="project-card fade-in">
                     <div class="project-image">
-                        <img src="./projeto2.png" alt="Projeto 2" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="./projeto2.png" alt="Project 2" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">📊 Consulta CNPJ</h3>
+                        <h3 class="project-title">📊 CNPJ Query</h3>
                         <p class="project-description">
-                            Uma aplicação web moderna e robusta para consulta completa de informações empresariais através do CNPJ, 
-                            utilizando múltiplas APIs oficiais brasileira
+                            A modern and robust web application for complete company information query through CNPJ, 
+                            using multiple official Brazilian APIs.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
@@ -680,30 +683,29 @@
                             <span class="tech-tag">APIs</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://consultacnpj-cdavsorkdb85j6tvyaxmdz.streamlit.app/" class="project-link">Ver Demo</a>
-                            <a href="https://github.com/marcelotorres1982/consulta_cnpj" class="project-link">Código</a>
+                            <a href="https://consultacnpj-cdavsorkdb85j6tvyaxmdz.streamlit.app/" class="project-link">View Demo</a>
+                            <a href="https://github.com/marcelotorres1982/consulta_cnpj" class="project-link">Code</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="project-card fade-in">
                     <div class="project-image">
-                        <img src="./projeto3.png" alt="Projeto 3" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="./projeto3.png" alt="Project 3" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">🐍 Beginner Python Projects - Repositório para testes de habilidades</h3>
+                        <h3 class="project-title">🐍 Beginner Python Projects - Repository for Skills Testing</h3>
                         <p class="project-description">
-                            Este repositório contém projetos Python pequenos, práticos e divertidos, para ajudar iniciantes 
-                            que estão iniciando sua jornada em programação.
+                            This repository contains small, practical and fun Python projects to help beginners 
+                            who are starting their programming journey.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">JSON</span>
-                            <span class="tech-tag">Frameworks Python</span>
-                            
+                            <span class="tech-tag">Python Frameworks</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/marcelotorres1982/beginner-python-projects" class="project-link">Código</a>
+                            <a href="https://github.com/marcelotorres1982/beginner-python-projects" class="project-link">Code</a>
                         </div>
                     </div>
                 </div>
@@ -712,16 +714,16 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contato" class="contact">
+    <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Vamos Conversar?</h2>
+            <h2 class="section-title">Let's Talk?</h2>
             <div class="contact-content">
                 <p class="contact-text">
-                    Estou sempre aberto para discutir novas oportunidades, projetos interessantes 
-                    ou apenas para trocar uma ideia sobre tecnologia.
+                    I'm always open to discuss new opportunities, interesting projects 
+                    or just to chat about technology.
                 </p>
                 <div class="contact-links">
-                    <a href="marcelotorres1982@gmail.com" class="contact-link">
+                    <a href="mailto:marcelotorres1982@gmail.com" class="contact-link">
                         📧 Email
                     </a>
                     <a href="https://www.linkedin.com/in/marcelo-t-554b8045/" class="contact-link" target="_blank">
@@ -730,8 +732,8 @@
                     <a href="https://github.com/marcelotorres1982" class="contact-link" target="_blank">
                         🐙 GitHub
                     </a>
-                    <a href="curriculo.html" class="contact-link" target="_blank">
-                        📱 Currículo
+                    <a href="curriculo-en.html" class="contact-link">
+                        📱 Resume
                     </a>
                 </div>
             </div>
@@ -740,7 +742,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Marcelo Torres. Todos os direitos reservados. Feito com ❤️ e hospedado no GitHub Pages.</p>
+        <p>&copy; 2025 Marcelo Torres. All rights reserved. Made with ❤️ and hosted on GitHub Pages.</p>
     </footer>
 
     <script>

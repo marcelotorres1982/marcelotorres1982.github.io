@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo - Marcelo Torres</title>
+    <title>Resume - Marcelo Torres</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Currículo completo de Marcelo Torres - Desenvolvedor Front-end">
-    <meta name="keywords" content="currículo, desenvolvedor, frontend, javascript, react, css, html">
+    <meta name="description" content="Complete resume of Marcelo Torres - Front-end Developer">
+    <meta name="keywords" content="resume, developer, frontend, javascript, react, css, html">
     <meta name="author" content="Marcelo Torres">
     
     <!-- Favicon -->
@@ -56,7 +56,7 @@
         /* Theme Toggle Button */
         .theme-toggle {
             position: fixed;
-            top: 50%;
+            top: 40%;
             right: 20px;
             transform: translateY(-50%);
             z-index: 1001;
@@ -130,6 +130,19 @@
         .nav-links a.active {
             color: var(--primary);
             font-weight: 600;
+        }
+        
+        .lang-link {
+            background: var(--primary) !important;
+            color: white !important;
+            padding: 0.5rem 1rem !important;
+            border-radius: 6px !important;
+            font-weight: 600 !important;
+        }
+        
+        .lang-link:hover {
+            background: var(--primary-dark) !important;
+            transform: translateY(-1px);
         }
         
         [data-theme="dark"] .nav-links a {
@@ -221,6 +234,11 @@
             border-bottom: 2px solid var(--primary);
             padding-bottom: 0.5rem;
             margin-bottom: 1.5rem;
+        }
+        
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
         }
         
         /* Personal Info */
@@ -420,6 +438,33 @@
             color: var(--text-light);
         }
         
+        /* Language Toggle Button */
+        .language-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1001;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .language-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--shadow);
+            background: var(--primary-dark);
+        }
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
@@ -461,6 +506,14 @@
                 width: 45px;
                 height: 45px;
                 font-size: 1rem;
+                top: 35%;
+            }
+            
+            .language-toggle {
+                bottom: 10px;
+                right: 10px;
+                padding: 8px 12px;
+                font-size: 0.9rem;
             }
         }
         
@@ -480,7 +533,8 @@
             header,
             .back-btn,
             .download-btn,
-            footer {
+            footer,
+            .language-toggle {
                 display: none !important;
             }
             
@@ -498,74 +552,31 @@
                 background: #fff;
             }
         }
-
-        /* Language Toggle Button */
-.language-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1001;
-    background: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px var(--shadow);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-}
-
-.language-toggle:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px var(--shadow);
-    background: var(--primary-dark);
-}
-
-/* Ajustar posição do theme toggle */
-.theme-toggle {
-    top: 40%;
-}
-
-@media (max-width: 768px) {
-    .language-toggle {
-        bottom: 10px;
-        right: 10px;
-        padding: 8px 12px;
-        font-size: 0.9rem;
-    }
-    
-    .theme-toggle {
-        top: 35%;
-    }
-}
     </style>
 </head>
 <body>
     <!-- Language Toggle Button -->
-<a href="curriculo-en.html" class="language-toggle" title="Switch to English">
-    🇺🇸 EN
-</a>
+    <a href="curriculo.html" class="language-toggle" title="Alternar para Português">
+        🇧🇷 PT
+    </a>
+    
     <!-- Theme Toggle Button -->
-    <button class="theme-toggle" id="themeToggle" title="Alternar tema">
+    <button class="theme-toggle" id="themeToggle" title="Toggle theme">
         🌙
     </button>
 
     <!-- Header -->
     <header>
         <nav>
-            <a href="index.html" class="logo">Marcelo Torres</a>
+            <a href="index-en.html" class="logo">Marcelo Torres</a>
             <ul class="nav-links">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="index.html#sobre">Sobre</a></li>
-                <li><a href="index.html#habilidades">Habilidades</a></li>
-                <li><a href="index.html#projetos">Projetos</a></li>
-                <li><a href="index.html#contato">Contato</a></li>
-                <li><a href="curriculo.html" class="active">Currículo</a></li>
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="index-en.html#about">About</a></li>
+                <li><a href="index-en.html#skills">Skills</a></li>
+                <li><a href="index-en.html#projects">Projects</a></li>
+                <li><a href="index-en.html#contact">Contact</a></li>
+                <li><a href="curriculo-en.html" class="active">Resume</a></li>
+                <li><a href="curriculo.html" class="lang-link">🇧🇷 PT</a></li>
             </ul>
         </nav>
     </header>
@@ -575,15 +586,15 @@
         <div class="container">
             <!-- Page Header -->
             <div class="page-header">
-                <a href="index.html" class="back-btn">
-                    ← Voltar ao Portfólio
+                <a href="index-en.html" class="back-btn">
+                    ← Back to Portfolio
                 </a>
-                <h1 class="page-title">Currículo</h1>
+                <h1 class="page-title">Resume</h1>
                 <p class="page-subtitle">
-                    Minha trajetória profissional e acadêmica completa
+                    My complete professional and academic journey
                 </p>
                 <a href="#" class="download-btn" onclick="window.print()">
-                    📄 Baixar PDF
+                    📄 Download PDF
                 </a>
             </div>
 
@@ -597,47 +608,46 @@
                         </div>
                         <div class="contact-info">
                             <h3>Marcelo Torres</h3>
-                            <p><strong>Desenvolvedor Full Stack</strong></p>
+                            <p><strong>Full Stack Developer</strong></p>
                             <p>📧 <a href="mailto:marcelotorres1982@gmail.com">marcelotorres1982@gmail.com</a></p>
-                            <p>📱 <a href="tel:+5551992733897">(51) 99273-3897</a></p>
+                            <p>📱 <a href="tel:+5551992733897">(+55) 51 99273-3897</a></p>
                             <p>🌐 <a href="https://github.com/marcelotorres1982" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/marcelo-t-554b8045/" target="_blank">LinkedIn</a></p>
-                            <p>📍 Porto Alegre, RS - Brasil</p>
+                            <p>📍 Porto Alegre, RS - Brazil</p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Professional Summary -->
                 <section class="resume-section">
-                    <h2 class="section-title">Resumo Profissional</h2>
+                    <h2 class="section-title">Professional Summary</h2>
                     <p>
-                        <div><span class="highlight">Desenvolvedor Full-Stack</span> em transição de carreira com <span class="highlight">perfil único no mercado</span>: combino sólida experiência comercial (10+ anos) com formação recente em Análise e Desenvolvimento de Sistemas e projetos práticos em Python, IA e automação.
+                        <span class="highlight">Full-Stack Developer</span> in career transition with a <span class="highlight">unique profile in the market</span>: I combine solid commercial experience (10+ years) with recent training in Systems Analysis and Development and practical projects in Python, AI, and automation.
                         <br><br>
-                        Meu diferencial competitivo está na capacidade de <span class="highlight">traduzir necessidades de negócio em soluções tecnológicas eficazes</span>, entendendo profundamente tanto o lado técnico quanto as demandas corporativas. Experiência comprovada em vendas consultivas B2B, gestão de contas e desenvolvimento de relacionamentos estratégicos, agora aplicada ao desenvolvimento de software.
+                        My competitive advantage lies in the ability to <span class="highlight">translate business needs into effective technological solutions</span>, deeply understanding both the technical side and corporate demands. Proven experience in B2B consultative sales, account management, and strategic relationship development, now applied to software development.
                         <br><br>
-                        <strong>Especialidades:</strong> Python & IA, Vendas Técnicas, Automação de Processos, Análise de Dados, Gestão de Projetos.
-                        </div>
+                        <strong>Specialties:</strong> Python & AI, Technical Sales, Process Automation, Data Analysis, Project Management.
                     </p>
                 </section>
 
                 <!-- Experience -->
                 <section class="resume-section">
-                    <h2 class="section-title">Experiência Profissional</h2>
+                    <h2 class="section-title">Professional Experience</h2>
                     
                     <div class="experience-item">
                         <div class="item-header">
                             <div>
-                                <div class="item-title">Desenvolvedor Full Stack (Projetos Pessoais)</div>
+                                <div class="item-title">Full Stack Developer (Personal Projects)</div>
                                 <div class="item-company">Freelancer</div>
                             </div>
-                            <div class="item-period">2023 - Atual</div>
+                            <div class="item-period">2023 - Present</div>
                         </div>
                         <div class="item-description">
                             <ul>
-                                <li>Desenvolvimento de aplicações web completas usando Python, Streamlit e APIs</li>
-                                <li>Criação do BarberVibe - Sistema de agendamentos para barbearias</li>
-                                <li>Desenvolvimento de aplicação de consulta CNPJ integrada com APIs brasileiras</li>
-                                <li>Implementação de interfaces responsivas e user-friendly</li>
-                                <li>Gerenciamento de projetos no GitHub com controle de versão</li>
+                                <li>Development of complete web applications using Python, Streamlit, and APIs</li>
+                                <li>Created BarberVibe - Appointment system for barbershops</li>
+                                <li>Development of CNPJ query application integrated with Brazilian APIs</li>
+                                <li>Implementation of responsive and user-friendly interfaces</li>
+                                <li>Project management on GitHub with version control</li>
                             </ul>
                         </div>
                     </div>
@@ -645,23 +655,22 @@
                     <div class="experience-item">
                         <div class="item-header">
                             <div>
-                                <div class="item-title">Executivo de Contas</div>
+                                <div class="item-title">Account Executive</div>
                                 <div class="item-company">Dell Computadores do Brasil Ltda</div>
                             </div>
                             <div class="item-period">2022 - 2025</div>
                         </div>
                         <div class="item-description">
                             <ul>
-                        <li><strong>Gestão estratégica de carteira premium</strong> com 800+ clientes empresariais ativos</li>
-                        <li><strong>Participante do Dell NextGen Program</strong> - programa global exclusivo para talentos de alto potencial</li>
-                        <li><strong>Especialista em vendas consultivas</strong> de toda linha Dell: computadores, servidores, storages e soluções integradas</li>
-                        <li><strong>Domínio completo das ferramentas Dell:</strong> SalesForce, SalesWorks, USP, DOMS</li>
-                        <li><strong>Pioneer na implementação da IA Dell Sales Chat,</strong> contribuindo para automação comercial inovadora</li>
-                        <li><strong>Certificações técnicas</strong> com parceiros: Microsoft, Intel, McAfee, Foxit</li>
-                        <li><strong>Metodologias avançadas:</strong> BANT, MEDDIC, SPIN Selling para qualificação e conversão</li>
+                                <li><strong>Strategic management of premium portfolio</strong> with 800+ active business clients</li>
+                                <li><strong>Participant in Dell NextGen Program</strong> - exclusive global program for high-potential talents</li>
+                                <li><strong>Specialist in consultative sales</strong> of entire Dell line: computers, servers, storages, and integrated solutions</li>
+                                <li><strong>Complete mastery of Dell tools:</strong> SalesForce, SalesWorks, USP, DOMS</li>
+                                <li><strong>Pioneer in implementing Dell AI Sales Chat,</strong> contributing to innovative commercial automation</li>
+                                <li><strong>Technical certifications</strong> with partners: Microsoft, Intel, McAfee, Foxit</li>
+                                <li><strong>Advanced methodologies:</strong> BANT, MEDDIC, SPIN Selling for qualification and conversion</li>
                             </ul>
                         </div>
- 
                     </div>
 
                     <div class="experience-item">
@@ -674,9 +683,9 @@
                         </div>
                         <div class="item-description">
                             <ul>
-                            <li>Prospecção ativa e vendas consultivas de planos de saúde empresariais</li>
-                            <li>Elaboração de relatórios gerenciais e análise de conversão</li>
-                            <li>Implementação de estratégias para otimização de resultados</li>
+                                <li>Active prospecting and consultative sales of corporate health plans</li>
+                                <li>Preparation of management reports and conversion analysis</li>
+                                <li>Implementation of strategies to optimize results</li>
                             </ul>
                         </div>
                     </div>
@@ -684,45 +693,42 @@
                     <div class="experience-item">
                         <div class="item-header">
                             <div>
-                                <div class="item-title">Experiências Complementares</div>
-                                <div class="item-company">Diversos Setores</div>
+                                <div class="item-title">Additional Experiences</div>
+                                <div class="item-company">Various Sectors</div>
                             </div>
                             <div class="item-period">2015 - 2020</div>
                         </div>
                         <div class="item-description">
                             <ul>
-                                <li><strong>Volpato Segurança:</strong> Vendas consultivas de soluções de segurança eletrônica</li>
-                                <li><strong>Sulvale Corretora:</strong> Gestão administrativa e CRM</li>
-                                <li><strong>Vivo S.A:</strong> Vendas corporativas em telecomunicações</li>
+                                <li><strong>Volpato Segurança:</strong> Consultative sales of electronic security solutions</li>
+                                <li><strong>Sulvale Corretora:</strong> Administrative management and CRM</li>
+                                <li><strong>Vivo S.A:</strong> Corporate telecommunications sales</li>
                             </ul>
                         </div>
                     </div>
-                    
-                </div>
-            
                 </section>
 
                 <!-- Education -->
                 <section class="resume-section">
-                    <h2 class="section-title">Formação Acadêmica</h2>
+                    <h2 class="section-title">Education</h2>
                     
                     <div class="education-item">
                         <div class="item-header">
                             <div>
-                                <div class="item-title">Análise e Desenvolvimento de Sistemas</div>
+                                <div class="item-title">Systems Analysis and Development</div>
                                 <div class="item-company">Centro Universitário Leonardo da Vinci - UNIASSELVI</div>
                             </div>
                             <div class="item-period">2021 - 2024</div>
                         </div>
                         <div class="item-description">
-                            <p>Formação voltada para desenvolvimento de software, análise de sistemas, programação orientada a objetos, banco de dados, engenharia de software e gestão de projetos.</p>
+                            <p>Education focused on software development, systems analysis, object-oriented programming, databases, software engineering, and project management.</p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Skills -->
                 <section class="resume-section">
-                    <h2 class="section-title">Habilidades Técnicas</h2>
+                    <h2 class="section-title">Technical Skills</h2>
                     <div class="skills-grid">
                         <div class="skill-item">
                             <span class="skill-icon">🐍</span>
@@ -758,82 +764,80 @@
                         </div>
                         <div class="skill-item">
                             <span class="skill-icon">📱</span>
-                            <div class="skill-name">Design Responsivo</div>
+                            <div class="skill-name">Responsive Design</div>
                         </div>
                         <div class="skill-item">
                             <span class="skill-icon">🔌</span>
-                            <div class="skill-name">APIs REST</div>
+                            <div class="skill-name">REST APIs</div>
                         </div>
                     </div>
                 </section>
 
                 <!-- Projects -->
                 <section class="resume-section">
-                    <h2 class="section-title">Projetos em Destaque</h2>
+                    <h2 class="section-title">Featured Projects</h2>
                     
                     <div class="experience-item">
                         <div class="item-header">
                             <div>
-                                <div class="item-title"><a href="https://barbervibe-gx9zz9o4zf73dwycappcvcz.streamlit.app/">BarberVibe - Sistema de Agendamentos</a></div>
-                                <div class="item-company">Projeto Pessoal</div>
+                                <div class="item-title"><a href="https://barbervibe-gx9zz9o4zf73dwycappcvcz.streamlit.app/">BarberVibe - Appointment System</a></div>
+                                <div class="item-company">Personal Project</div>
                             </div>
                             <div class="item-period">2025</div>
                         </div>
                         <div class="item-description">
-                            <p>Sistema completo para gestão de barbearias com funcionalidades de agendamento, cadastro de clientes e controle de horários. Desenvolvido com Python e Streamlit.</p>
-                            <p><strong>Tecnologias:</strong> Python, Streamlit, APIs</p>
+                            <p>Complete system for barbershop management with appointment functionality, customer registration, and schedule control. Developed with Python and Streamlit.</p>
+                            <p><strong>Technologies:</strong> Python, Streamlit, APIs</p>
                         </div>
                     </div>
 
                     <div class="experience-item">
                         <div class="item-header">
                             <div>
-                                <div class="item-title"><a href="https://consultacnpj-cdavsorkdb85j6tvyaxmdz.streamlit.app/">Consulta CNPJ</a></div>
-                                <div class="item-company">Projeto Pessoal</div>
+                                <div class="item-title"><a href="https://consultacnpj-cdavsorkdb85j6tvyaxmdz.streamlit.app/">CNPJ Query</a></div>
+                                <div class="item-company">Personal Project</div>
                             </div>
                             <div class="item-period">2024</div>
                         </div>
                         <div class="item-description">
-                            <p>Aplicação web para consulta completa de informações empresariais através do CNPJ, utilizando múltiplas APIs oficiais brasileiras.</p>
-                            <p><strong>Tecnologias:</strong> Python, Streamlit, Requests, APIs</p>
+                            <p>Web application for complete company information query through CNPJ, using multiple official Brazilian APIs.</p>
+                            <p><strong>Technologies:</strong> Python, Streamlit, Requests, APIs</p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Languages -->
                 <section class="resume-section">
-                    <h2 class="section-title">Idiomas</h2>
+                    <h2 class="section-title">Languages</h2>
                     <div class="languages-list">
                         <div class="language-item">
-                            <span class="language-name">Português</span>
-                            <span class="language-level">Nativo</span>
+                            <span class="language-name">Portuguese</span>
+                            <span class="language-level">Native</span>
                         </div>
                         <div class="language-item">
-                            <span class="language-name">Inglês</span>
-                            <span class="language-level">Intermediário</span>
+                            <span class="language-name">English</span>
+                            <span class="language-level">Intermediate</span>
                         </div>
                     </div>
                 </section>
 
                 <!-- Additional Information -->
                 <section class="resume-section">
-                    <h2 class="section-title">Informações Complementares</h2>
-                    
-
+                    <h2 class="section-title">Additional Information</h2>
                     <div class="experience-item">
                         <div class="item-header">
                             <div>
-                                <div class="item-title">Experiências Complementares</div>
+                                <div class="item-title">Professional Characteristics</div>
                             </div>
                         </div>
                         <div class="item-description">
                             <ul>
-                        <li>Interesse em aprendizado contínuo e novas tecnologias</li>
-                        <li>Experiência com metodologias ágeis</li>
-                        <li>Habilidades em resolução de problemas e pensamento analítico</li>
-                        <li>Trabalho em equipe e comunicação efetiva</li>
-                        <li>Disponibilidade para home office, híbrido ou presencial</li>
-                    </ul>
+                                <li>Interest in continuous learning and new technologies</li>
+                                <li>Experience with agile methodologies</li>
+                                <li>Problem-solving skills and analytical thinking</li>
+                                <li>Teamwork and effective communication</li>
+                                <li>Available for remote, hybrid, or on-site work</li>
+                            </ul>
                         </div>
                     </div>
                 </section>
@@ -843,7 +847,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Marcelo Torres. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Marcelo Torres. All rights reserved.</p>
     </footer>
 
     <script>
