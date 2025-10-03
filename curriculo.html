@@ -153,145 +153,30 @@
                 padding: 20px;
             }
         }
-
-        /* Language Toggle Button */
-.language-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1001;
-    background: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px var(--shadow);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-}
-
-.language-toggle:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px var(--shadow);
-    background: var(--primary-dark);
-}
-
-/* Ajustar posição do theme toggle */
-.theme-toggle {
-    top: 40%;
-}
-
-@media (max-width: 768px) {
-    .language-toggle {
-        bottom: 10px;
-        right: 10px;
-        padding: 8px 12px;
-        font-size: 0.9rem;
-    }
-    
-    .theme-toggle {
-        top: 35%;
-    }
-}
     </style>
 </head>
 <body>
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle" id="themeToggle" title="Alternar tema">
-        🌙
-    </button>
-
-    <!-- Header -->
-    <header>
-        <nav>
-            <a href="index.html" class="logo">Marcelo Torres</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="index.html#sobre">Sobre</a></li>
-                <li><a href="index.html#habilidades">Habilidades</a></li>
-                <li><a href="index.html#projetos">Projetos</a></li>
-                <li><a href="index.html#contato">Contato</a></li>
-                <li><a href="curriculo.html" class="active">Currículo</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="container">
-            <!-- Page Header -->
-            <div class="page-header">
-                <a href="index.html" class="back-btn">
-                    ← Voltar ao Portfólio
+    <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar ao Portfólio</a>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Marcelo Torres</h1>
+            <p>Desenvolvedor Full Stack</p>
+            <div class="contact-info">
+                <a href="mailto:marcelotorres1982@gmail.com">
+                    <i class="fas fa-envelope"></i> marcelotorres1982@gmail.com
                 </a>
-                <h1 class="page-title">Currículo</h1>
-                <p class="page-subtitle">
-                    Minha trajetória profissional e acadêmica completa
-                </p>
-                <a href="#" class="download-btn" onclick="window.print()">
-                    📄 Baixar PDF
+                <a href="https://github.com/marcelotorres1982" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/marcelo-t-554b8045/" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://marcelotorres1982.github.io/" target="_blank">
+                    <i class="fas fa-globe"></i> Portfólio
                 </a>
             </div>
-
-            <!-- Resume Content -->
-            <div class="resume-content">
-                <!-- Personal Information -->
-                <section class="resume-section">
-                    <div class="personal-info">
-                        <div class="profile-photo">
-                            <img src="./foto.jpeg" alt="Marcelo Torres" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
-                        </div>
-                        <div class="contact-info">
-                            <h3>Marcelo Torres</h3>
-                            <p><strong>Desenvolvedor Full Stack</strong></p>
-                            <p>📧 <a href="mailto:marcelotorres1982@gmail.com">marcelotorres1982@gmail.com</a></p>
-                            <p>📱 <a href="tel:+5551992733897">(51) 99273-3897</a></p>
-                            <p>🌐 <a href="https://github.com/marcelotorres1982" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/marcelo-t-554b8045/" target="_blank">LinkedIn</a></p>
-                            <p>📍 Porto Alegre, RS - Brasil</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Professional Summary -->
-                <section class="resume-section">
-                    <h2 class="section-title">Resumo Profissional</h2>
-                    <p>
-                        <div><span class="highlight">Desenvolvedor Full-Stack</span> em transição de carreira com <span class="highlight">perfil único no mercado</span>: combino sólida experiência comercial (3+ anos na Dell Technologies) com formação recente em Análise e Desenvolvimento de Sistemas e projetos práticos em Python, IA e automação.
-                        <br><br>
-                        Meu diferencial competitivo está na capacidade de <span class="highlight">traduzir necessidades de negócio em soluções tecnológicas eficazes</span>, entendendo profundamente tanto o lado técnico quanto as demandas corporativas. Experiência comprovada em vendas consultivas B2B, gestão de contas e desenvolvimento de relacionamentos estratégicos, agora aplicada ao desenvolvimento de software.
-                        <br><br>
-                        <strong>Especialidades:</strong> Python & IA, Vendas Técnicas, Automação de Processos, Análise de Dados, Gestão de Projetos.
-                        </div>
-                    </p>
-                </section>
-
-                <!-- Experience -->
-                <section class="resume-section">
-                    <h2 class="section-title">Experiência Profissional</h2>
-                    
-                    <div class="experience-item">
-                        <div class="item-header">
-                            <div>
-                                <div class="item-title">Desenvolvedor Full Stack (Projetos Pessoais)</div>
-                                <div class="item-company">Freelancer</div>
-                            </div>
-                            <div class="item-period">2023 - Atual</div>
-                        </div>
-                        <div class="item-description">
-                            <ul>
-                                <li>Desenvolvimento de aplicações web completas usando Python, Streamlit e APIs</li>
-                                <li>Criação do BarberVibe - Sistema de agendamentos para barbearias</li>
-                                <li>Desenvolvimento de aplicação de consulta CNPJ integrada com APIs brasileiras</li>
-                                <li>Implementação de interfaces responsivas e user-friendly</li>
-                                <li>Gerenciamento de projetos no GitHub com controle de versão</li>
-                            </ul>
-                        </div>
-                    </div>
+        </div>
 
         <div class="content">
             <div class="section">
@@ -385,47 +270,30 @@
                 </div>
             </div>
 
-                    <div class="experience-item">
-                        <div class="item-header">
-                            <div>
-                                <div class="item-title"><a href="https://consultacnpj-cdavsorkdb85j6tvyaxmdz.streamlit.app/">Consulta CNPJ</a></div>
-                                <div class="item-company">Projeto Pessoal</div>
-                            </div>
-                            <div class="item-period">2024</div>
-                        </div>
-                        <div class="item-description">
-                            <p>Aplicação web para consulta completa de informações empresariais através do CNPJ, utilizando múltiplas APIs oficiais brasileiras.</p>
-                            <p><strong>Tecnologias:</strong> Python, Streamlit, Requests, APIs</p>
-                        </div>
-                    </div>
-                </section>
+            <div class="section">
+                <h2><i class="fas fa-graduation-cap"></i> Formação Acadêmica</h2>
+                <div class="education-item">
+                    <h3>Análise e Desenvolvimento de Sistemas</h3>
+                    <p class="date">Tecnólogo - Concluído</p>
+                    <p class="description">
+                        Formação focada em desenvolvimento de software, banco de dados, engenharia de software 
+                        e metodologias ágeis.
+                    </p>
+                </div>
+            </div>
 
-                <!-- Languages -->
-                <section class="resume-section">
-                    <h2 class="section-title">Idiomas</h2>
-                    <div class="languages-list">
-                        <div class="language-item">
-                            <span class="language-name">Português</span>
-                            <span class="language-level">Nativo</span>
-                        </div>
-                        <div class="language-item">
-                            <span class="language-name">Inglês</span>
-                            <span class="language-level">Intermediário</span>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Additional Information -->
-                <section class="resume-section">
-                    <h2 class="section-title">Informações Complementares</h2>
-                    <ul>
-                        <li>Interesse em aprendizado contínuo e novas tecnologias</li>
-                        <li>Experiência com metodologias ágeis</li>
-                        <li>Habilidades em resolução de problemas e pensamento analítico</li>
-                        <li>Trabalho em equipe e comunicação efetiva</li>
-                        <li>Disponibilidade para home office ou presencial</li>
-                    </ul>
-                </section>
+            <div class="section">
+                <h2><i class="fas fa-certificate"></i> Competências Adicionais</h2>
+                <ul class="description" style="padding-left: 20px;">
+                    <li>Desenvolvimento de aplicações web responsivas</li>
+                    <li>Integração com APIs REST e serviços em nuvem</li>
+                    <li>Controle de versão com Git e GitHub</li>
+                    <li>Implementação de autenticação OAuth2</li>
+                    <li>Deploy de aplicações em plataformas cloud (Streamlit Cloud, GitHub Pages)</li>
+                    <li>Metodologias ágeis e desenvolvimento incremental</li>
+                    <li>Resolução de problemas e pensamento analítico</li>
+                    <li>Inglês técnico para leitura de documentação</li>
+                </ul>
             </div>
         </div>
     </div>
