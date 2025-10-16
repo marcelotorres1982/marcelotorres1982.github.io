@@ -139,7 +139,7 @@ Tipografia escalável
 📧 Contato
 
 Email: marcelotorres1982@gmail.com
-LinkedIn: https://www.linkedin.com/in/marcelo-t-554b8045
+LinkedIn: https://www.linkedin.com/in/marcelo-t-alves
 GitHub: https://github.com/marcelotorres1982
 
 📄 Licença
