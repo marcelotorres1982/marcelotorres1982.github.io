@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume — Marcelo Torres</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Resume of Marcelo Torres — Full Stack Developer focused on Python, AI/ML, and modern web." />
+  <meta name="keywords" content="Resume, Full Stack, Python, AI, Machine Learning, Streamlit, Flask, Django, Tailwind, Vue, SQL" />
+  <meta name="author" content="Marcelo Torres" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%92%BB%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind (CDN) -->
+  <script>
+    window.tailwind = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { inter: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: { primary: { DEFAULT: '#2563eb', dark: '#1d4ed8' } }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root { color-scheme: dark; }
+    html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    @media print {
+      header, .no-print { display: none !important; }
+      body { background: white !important; color: black !important; }
+      .print-section { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100">
+  <a href="#content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:bg-primary focus:text-white focus:px-3 focus:py-1.5 focus:rounded-md">Skip to content</a>
+
+  <!-- HEADER -->
+  <header id="topbar" class="fixed inset-x-0 top-0 z-50 bg-zinc-900/90 border-b border-zinc-800 backdrop-blur no-print">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between" aria-label="Primary">
+      <a href="./index.html" class="font-extrabold text-primary">Marcelo Torres</a>
+
+      <button id="menuBtn" class="md:hidden w-10 h-10 grid place-items-center rounded-md border border-zinc-700">☰</button>
+
+      <ul class="hidden md:flex items-center gap-6 text-sm font-semibold">
+        <li><a href="./index.html" class="hover:text-primary">Home</a></li>
+        <li><a href="./index.html#about" class="hover:text-primary">About</a></li>
+        <li><a href="./index.html#skills" class="hover:text-primary">Skills</a></li>
+        <li><a href="./index.html#projects" class="hover:text-primary">Projects</a></li>
+        <li><a href="./index.html#certifications" class="hover:text-primary">Certifications</a></li>
+        <li><a href="./index.html#contact" class="hover:text-primary">Contact</a></li>
+        <li>
+          <a href="./resume.html" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-primary text-white hover:bg-primary-dark transition">
+            📄 Resume
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-zinc-800 bg-zinc-900/95 backdrop-blur">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex flex-col gap-3 text-sm font-semibold">
+        <a href="./index.html" class="hover:text-primary">Home</a>
+        <a href="./index.html#about" class="hover:text-primary">About</a>
+        <a href="./index.html#skills" class="hover:text-primary">Skills</a>
+        <a href="./index.html#projects" class="hover:text-primary">Projects</a>
+        <a href="./index.html#certifications" class="hover:text-primary">Certifications</a>
+        <a href="./index.html#contact" class="hover:text-primary">Contact</a>
+        <a href="./resume.html" class="hover:text-primary">Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-24" id="content">
+    <!-- PAGE HEADER -->
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 no-print">
+        <div>
+          <a href="./index.html" class="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-primary mb-3">
+            ← Back to Portfolio
+          </a>
+          <h1 class="text-4xl font-extrabold tracking-tight">Resume</h1>
+          <p class="mt-2 text-zinc-300">Complete professional and academic journey</p>
+        </div>
+        <button onclick="window.print()" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-zinc-700 font-semibold hover:bg-zinc-800 self-start">
+          📄 Download PDF
+        </button>
+      </div>
+    </section>
+
+    <!-- PERSONAL INFO -->
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 print-section">
+      <div class="bg-zinc-900/40 rounded-2xl border border-zinc-800 p-6 sm:p-8">
+        <div class="grid md:grid-cols-[200px_1fr] gap-6 items-start">
+          <div class="h-48 w-48 mx-auto md:mx-0 rounded-2xl overflow-hidden border border-zinc-800">
+            <img src="./img/foto.jpeg" alt="Profile photo of Marcelo Torres" class="w-full h-full object-cover object-top" loading="lazy" />
+          </div>
+          <div class="space-y-2">
+            <h2 class="text-2xl font-extrabold">Marcelo Torres</h2>
+            <p class="text-xl text-primary font-semibold">Full Stack Developer</p>
+            <div class="pt-3 space-y-2 text-zinc-300">
+              <p>📧 <a href="mailto:marcelotorres1982@gmail.com" class="hover:text-primary">marcelotorres1982@gmail.com</a></p>
+              <p>📱 <a href="tel:+5551992733897" class="hover:text-primary">(+55) 51 99273-3897</a></p>
+              <p>🌐 
+                <a href="https://github.com/marcelotorres1982" target="_blank" rel="noopener noreferrer" class="hover:text-primary">GitHub</a> | 
+                <a href="https://www.linkedin.com/in/marcelo-t-alves/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">LinkedIn</a>
+              </p>
+              <p>📍 Porto Alegre, RS — Brazil</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 print-section">
+      <h2 class="text-2xl font-extrabold mb-4">Professional Summary</h2>
+      <div class="bg-zinc-900/40 rounded-xl border border-zinc-800 p-6">
+        <p class="text-zinc-300 mb-4">
+          <span class="text-primary font-semibold">Full-Stack Developer</span> in career transition with a <span class="text-primary font-semibold">unique market profile</span>:
+          I combine 15+ years of consultative B2B experience with a recent Systems Analysis & Development degree and
+          hands-on projects in <strong>Python</strong>, <strong>AI/ML</strong>, and <strong>automation</strong>.
+          I translate business needs into effective technical solutions with a deep understanding of both
+          engineering and enterprise demands.
+        </p>
+        <p class="text-zinc-300"><strong>Focus areas:</strong> Python & AI/ML, Process Automation, Data Analysis, Project Management, Technical Sales enablement.</p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 print-section">
+      <h2 class="text-2xl font-extrabold mb-6">Professional Experience</h2>
+      <div class="space-y-6">
+        
+        <!-- Experience 1 -->
+        <div class="bg-zinc-900/40 rounded-xl border border-zinc-800 p-6">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+            <div>
+              <h3 class="text-xl font-bold">Full Stack Developer (Personal Projects)</h3>
+              <p class="text-primary font-semibold">Freelancer</p>
+            </div>
+            <span class="text-zinc-400 text-sm whitespace-nowrap">2023 — Present</span>
+          </div>
+          <ul class="space-y-2 text-zinc-300 list-disc list-inside">
+            <li>End-to-end web apps using Python, Streamlit, Flask/Django and REST APIs.</li>
+            <li>Creator of <strong>BarberVibe</strong> — booking system for barbershops.</li>
+            <li>Built a <strong>CNPJ lookup</strong> app integrated with Brazilian APIs.</li>
+            <li>Responsive, accessible UIs and componentized codebases (Tailwind + Vue where applicable).</li>
+            <li>Project management and versioning on Git/GitHub.</li>
+          </ul>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="bg-zinc-900/40 rounded-xl border border-zinc-800 p-6">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+            <div>
+              <h3 class="text-xl font-bold">Account Executive</h3>
+              <p class="text-primary font-semibold">Dell Computadores do Brasil Ltda</p>
+            </div>
+            <span class="text-zinc-400 text-sm whitespace-nowrap">2022 — 2025</span>
+          </div>
+          <ul class="space-y-2 text-zinc-300 list-disc list-inside">
+            <li>Strategic management of a premium portfolio with 800+ active corporate clients.</li>
+            <li>Participant of the <strong>Dell NextGen</strong> global high-potential program.</li>
+            <li>Consultative sales across PCs, servers, storage, and integrated solutions.</li>
+            <li>Full proficiency with Salesforce, SalesWorks, USP, DOMS.</li>
+            <li>Pioneer on <strong>Dell AI Sales Chat</strong> implementation for commercial automation.</li>
+            <li>Technical certifications with partners: Microsoft, Intel, McAfee, Foxit.</li>
+            <li>Methodologies: <strong>BANT</strong>, <strong>MEDDIC</strong>, <strong>SPIN Selling</strong>.</li>
+          </ul>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="bg-zinc-900/40 rounded-xl border border-zinc-800 p-6">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+            <div>
+              <h3 class="text-xl font-bold">Inside Sales</h3>
+              <p class="text-primary font-semibold">Qualicorp S.A.</p>
+            </div>
+            <span class="text-zinc-400 text-sm whitespace-nowrap">2021 — 2021</span>
+          </div>
+          <ul class="space-y-2 text-zinc-300 list-disc list-inside">
+            <li>Active prospecting and consultative sales of corporate health plans.</li>
+            <li>Management reports and conversion analysis.</li>
+            <li>Strategies to optimize results and reduce cycle time.</li>
+          </ul>
+        </div>
+
+        <!-- Experience 4 -->
+        <div class="bg-zinc-900/40 rounded-xl border border-zinc-800 p-6">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+            <div>
+              <h3 class="text-xl font-bold">Additional Experience</h3>
+              <p class="text-primary font-semibold">Various sectors</p>
+            </div>
+            <span class="text-zinc-400 text-sm whitespace-nowrap">2015 — 2020</span>
+          </div>
+          <ul class="space-y-2 text-zinc-300 list-disc list-inside">
+            <li><strong>Volpato Segurança:</strong> Consultative sales of electronic security solutions.</li>
+            <li><strong>Sulvale Corretora:</strong> Administrative management and CRM.</li>
+            <li><strong>Vivo S.A.:</strong> Corporate telecommunications sales.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 print-section">
+      <h2 class="text-2xl font-extrabold mb-6">Education</h2>
+      <div class="bg-zinc-900/40 rounded-xl border border-zinc-800 p-6">
+        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+          <div>
+            <h3 class="text-xl font-bold">Systems Analysis and Development</h3>
+            <p class="text-primary font-semibold">Centro Universitário Leonardo da Vinci — UNIASSELVI</p>
+          </div>
+          <span class="text-zinc-400 text-sm whitespace-nowrap">2021 — 2024</span>
+        </div>
+        <p class="text-zinc-300">Software development, systems analysis, OOP, databases, software engineering, and project management.</p>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 print-section">
+      <h2 class="text-2xl font-extrabold mb-6">Technical Skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div class="bg-zinc-900/40 rounded-lg border border-zinc-800 p-4 text-center">
+          <span class="text-3xl mb-2 block">🐍</span>
+          <p class="font-semibold text-sm">Python</p>
+        </div>
+        <div class="bg-zinc-900/40 rounded-lg border border-zinc-800 p-4 text-center">
+          <span class="text-3xl mb-2 block">🧠</span>
+          <p class="font-semibold text-sm">AI & ML</p>
+        </div>
+        <div class="bg-zinc-900/40 rounded-lg border border-zinc-800 p-4 text-center">
+          <span class="text-3xl mb-2 block">🌐</span>
+          <p class="font-semibold text-sm">Flask</p>
+        </div>
+        <div class="bg-zinc-900/40 rounded-lg border border-zinc-800 p-4 text-center">
+          <span class="text-3xl mb-2 block">🏗️</span>
+          <p class="font-semibold text-sm">Django</p>
+        </div>
+        <div class="bg-zinc-900/40 rounded-lg border border-zinc-800 p-4 text-center">
+          <span class="text-3xl mb-2 block">⚡</span>
+          <p class="font-semibold text-sm">Streamlit</p>
+        </div>
+        <div class="bg-zinc-900/40 rounded-lg border border-zinc-800 p-4 text-center">
+          <span class="text-3xl mb-2 block">🧮</span>
+          <p class="font-semibold text-sm">NumPy</p>
+        </div>
+        <div class="bg-zinc-900/40 rounded-lg border border-zinc-800 p-4 text-center">
+          <span class="text-3xl mb-2 block">📊</span>
+          <p class="font-semibold text-sm">scikit-learn</p>
+        </div>
+        <div class="bg-zinc-900/40 rounded-lg border border-zinc-800 p-4 text-center">
+          <span class="text-3xl mb-2 block">🧩</span>
+          <p class="font-semibold text-sm">Tailwind CSS</p>
+        </div>
+        <div class="bg-zinc-900/40 rounded-lg border border-zinc-800 p-4 text-center">
+          <span class="text-3xl mb-2 block">🧭</span>
+          <p class="font-semibold text-sm">Vue.js</p>
+        </div>
+        <div class="bg-zinc-900/40 rounded-lg border border-zinc-800 p-4 text-center">
+          <span class="text-3xl mb-2 block">🗄️</span>
+          <p class="font-semibold text-sm">SQL</p>
+        </div>
+        <div class="bg-zinc-900/40 rounded-lg border border-zinc-800 p-4 text-center">
+          <span class="text-3xl mb-2 block">🔌</span>
+          <p class="font-semibold text-sm">REST APIs</p>
+        </div>
+        <div class="bg-zinc-900/40 rounded-lg border border-zinc-800 p-4 text-center">
+          <span class="text-3xl mb-2 block">🗃️</span>
+          <p class="font-semibold text-sm">Git/GitHub</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 print-section">
+      <h2 class="text-2xl font-extrabold mb-6">Featured Projects</h2>
+      <div class="space-y-6">
+        
+        <div class="bg-zinc-900/40 rounded-xl border border-zinc-800 p-6">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+            <div>
+              <h3 class="text-xl font-bold">
+                <a href="https://barbervibe-gx9zz9o4zf73dwycappcvcz.streamlit.app/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">
+                  BarberVibe — Booking System
+                </a>
+              </h3>
+              <p class="text-zinc-400 text-sm">Personal Project</p>
+            </div>
+            <span class="text-zinc-400 text-sm whitespace-nowrap">2025</span>
+          </div>
+          <p class="text-zinc-300 mb-3">Barbershop management with bookings, clients and schedule control. Built with Python and Streamlit.</p>
+          <p class="text-sm"><strong>Tech:</strong> <span class="text-zinc-400">Python, Streamlit, APIs</span></p>
+        </div>
+
+        <div class="bg-zinc-900/40 rounded-xl border border-zinc-800 p-6">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+            <div>
+              <h3 class="text-xl font-bold">
+                <a href="https://consultacnpj-cdavsorkdb85j6tvyaxmdz.streamlit.app/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">
+                  CNPJ Lookup
+                </a>
+              </h3>
+              <p class="text-zinc-400 text-sm">Personal Project</p>
+            </div>
+            <span class="text-zinc-400 text-sm whitespace-nowrap">2024</span>
+          </div>
+          <p class="text-zinc-300 mb-3">Web app for comprehensive company information via CNPJ, using multiple official Brazilian APIs.</p>
+          <p class="text-sm"><strong>Tech:</strong> <span class="text-zinc-400">Python, Streamlit, Requests, APIs</span></p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LANGUAGES -->
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 print-section">
+      <h2 class="text-2xl font-extrabold mb-6">Languages</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="bg-zinc-900/40 rounded-xl border border-zinc-800 p-6 flex items-center justify-between">
+          <span class="font-semibold">Portuguese</span>
+          <span class="text-zinc-400">Native</span>
+        </div>
+        <div class="bg-zinc-900/40 rounded-xl border border-zinc-800 p-6 flex items-center justify-between">
+          <span class="font-semibold">English</span>
+          <span class="text-zinc-400">Intermediate</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADDITIONAL INFO -->
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 pb-16 print-section">
+      <h2 class="text-2xl font-extrabold mb-6">Additional Information</h2>
+      <div class="bg-zinc-900/40 rounded-xl border border-zinc-800 p-6">
+        <h3 class="text-xl font-bold mb-4">Professional Traits</h3>
+        <ul class="space-y-2 text-zinc-300 list-disc list-inside">
+          <li>Continuous learning mindset and passion for new technologies.</li>
+          <li>Experience with agile methodologies.</li>
+          <li>Problem-solving ability and analytical thinking.</li>
+          <li>Teamwork and effective communication.</li>
+          <li>Available for remote, hybrid, or on-site work.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-8 text-center bg-zinc-950 text-zinc-400 no-print">
+    <p>&copy; 2025 Marcelo Torres. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
