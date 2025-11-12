@@ -11,13 +11,6 @@ Animações suaves e transições elegantes
 Tipografia moderna com fonte Inter
 Gradientes e efeitos visuais atraentes
 
-🌙 Modo Escuro/Claro
-
-Alternância entre tema claro e escuro
-Botão flutuante para mudança de tema
-Preferência salva automaticamente
-Transições suaves entre temas
-
 📱 Totalmente Responsivo
 
 Adapta-se perfeitamente a qualquer dispositivo
@@ -106,13 +99,6 @@ Tecnologias: Python, JSON
 Ver Código
 
 💡 Funcionalidades Técnicas
-Modo Escuro/Claro
-
-Implementado com CSS Custom Properties
-LocalStorage para persistência
-Transições suaves entre temas
-Ícones dinâmicos (🌙/☀️)
-
 Animações
 
 Fade-in elements com Intersection Observer
