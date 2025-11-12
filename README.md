@@ -38,14 +38,16 @@ GitHub Pages - Hospedagem gratuita e confiável
 Git - Controle de versão
 
 📂 Estrutura do Projeto
+```
 marcelotorres1982.github.io/
 │
 ├── 📄 index.html           # Página principal
 ├── 🖼️ foto.jpg            # Foto pessoal
 ├── 🖼️ projeto1.png        # Screenshot do BarberVibe
-├── 🖼️ projeto2.png        # Screenshot do Consulta CNPJ  
+├── 🖼️ projeto2.png        # Screenshot do Consulta CNPJ
 ├── 🖼️ projeto3.png        # Screenshot do Python Projects
 └── 📝 README.md           # Documentação do projeto
+```
 🎯 Seções do Portfólio
 1. Hero Section
 
